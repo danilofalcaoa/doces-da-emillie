@@ -1,4 +1,4 @@
-const BOX_PRICE = 8;
+const BOX_PRICE = 10;
 const WHATSAPP_NUMBER = "554299080901";
 
 const flavors = [
