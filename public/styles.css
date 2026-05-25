@@ -138,6 +138,15 @@ h3 {
   overflow-wrap: break-word;
 }
 
+.section-note {
+  max-width: 720px;
+  margin: -2px 0 0;
+  color: #80594c;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
