@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Monte sua caixinha com 4 docinhos artesanais da Doces da Emillie em Maringa - PR."
+    />
+    <title>Doces da Emillie | Monte sua caixinha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <img class="brand-logo" src="./assets/logo.png" alt="Logo Doces da Emillie" />
+          <p class="eyebrow">Docinhos artesanais em Maringa - PR</p>
+          <h1 id="page-title">
+            <span>Monte sua caixinha</span>
+            <span>do seu jeito</span>
+          </h1>
+          <p class="intro">
+            Escolha 4 docinhos por caixa entre brigadeiro, prestigio, beijinho e ninho.
+            Cada caixinha sai por <strong>R$8,00</strong> e o pedido vai prontinho para o WhatsApp.
+          </p>
+          <div class="hero-actions">
+            <a href="#montar" class="primary-link">Montar minha caixa</a>
+          </div>
+        </div>
+        <div class="hero-media" aria-hidden="true">
+          <img class="box-photo" src="./assets/caixa-doces.png" alt="" />
+          <img class="mascot" src="./assets/mascote.png" alt="" />
+        </div>
+      </section>
+
+      <section class="flavors" aria-labelledby="flavors-title">
+        <div>
+          <p class="section-kicker">Sabores disponiveis</p>
+          <h2 id="flavors-title">Docinhos feitos com carinho</h2>
+        </div>
+        <div class="flavor-grid" id="flavorGrid"></div>
+      </section>
+
+      <section class="builder" id="montar" aria-labelledby="builder-title">
+        <div class="builder-header">
+          <div>
+            <p class="section-kicker">Pedido pelo WhatsApp</p>
+            <h2 id="builder-title">Monte suas caixinhas</h2>
+          </div>
+          <div class="total-card">
+            <span>Total</span>
+            <strong id="orderTotal">R$8,00</strong>
+          </div>
+        </div>
+
+        <div class="order-controls" aria-label="Controles do pedido">
+          <label class="field">
+            <span>Quantidade de caixas</span>
+            <input id="boxCount" type="number" min="1" max="20" value="1" inputmode="numeric" />
+          </label>
+
+          <fieldset class="mode-group">
+            <legend>Como montar</legend>
+            <label>
+              <input type="radio" name="boxMode" value="same" checked />
+              <span>Todas iguais a primeira</span>
+            </label>
+            <label>
+              <input type="radio" name="boxMode" value="custom" />
+              <span>Montar cada caixa</span>
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="builder-layout">
+          <div class="boxes-panel" id="boxesPanel"></div>
+
+          <aside class="summary-panel" aria-labelledby="summary-title">
+            <h3 id="summary-title">Resumo do pedido</h3>
+            <div id="summaryList" class="summary-list"></div>
+            <div class="summary-footer">
+              <span id="summaryCount">1 caixa</span>
+              <strong id="summaryTotal">R$8,00</strong>
+            </div>
+            <button class="whatsapp-button" id="whatsappButton" type="button">
+              Fazer pedido no WhatsApp
+            </button>
+            <p class="help-text">
+              Ao clicar, o WhatsApp abre com a mensagem do pedido pronta para enviar.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

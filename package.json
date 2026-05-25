@@ -1,0 +1,13 @@
+{
+  "name": "doces-da-emillie-bio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve public",
+    "build": "echo Static site ready in public",
+    "start": "npx serve public"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
