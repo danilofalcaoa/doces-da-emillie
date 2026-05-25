@@ -323,6 +323,33 @@ h3 {
   border-color: var(--blue-strong);
 }
 
+.box-count-control {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) 54px;
+  gap: 8px;
+  align-items: center;
+}
+
+.box-count-control button {
+  height: 48px;
+  border: 0;
+  border-radius: 14px;
+  color: var(--brown);
+  font-size: 1.35rem;
+  font-weight: 900;
+  cursor: pointer;
+  background: var(--white);
+  box-shadow: inset 0 0 0 1px rgba(90, 46, 34, 0.1);
+}
+
+.box-count-control button:active {
+  transform: translateY(1px);
+}
+
+.box-count-control input {
+  text-align: center;
+}
+
 .mode-group label {
   display: inline-flex;
   gap: 8px;

@@ -41,6 +41,8 @@ const state = {
 const flavorGrid = document.querySelector("#flavorGrid");
 const boxesPanel = document.querySelector("#boxesPanel");
 const boxCountInput = document.querySelector("#boxCount");
+const decreaseBoxesButton = document.querySelector("#decreaseBoxes");
+const increaseBoxesButton = document.querySelector("#increaseBoxes");
 const orderTotal = document.querySelector("#orderTotal");
 const summaryTotal = document.querySelector("#summaryTotal");
 const summaryCount = document.querySelector("#summaryCount");
@@ -101,6 +103,16 @@ function ensureBoxCount() {
   while (state.boxes.length < state.boxCount) {
     state.boxes.push(createEmptyBox());
   }
+}
+
+function normalizeBoxCount(value) {
+  return Math.max(1, Math.min(20, Number(value) || 1));
+}
+
+function setBoxCount(value) {
+  state.boxCount = normalizeBoxCount(value);
+  boxCountInput.value = String(state.boxCount);
+  render();
 }
 
 function renderFlavorCards() {
@@ -272,10 +284,22 @@ boxesPanel.addEventListener("click", (event) => {
 });
 
 boxCountInput.addEventListener("input", () => {
-  const nextCount = Math.max(1, Math.min(20, Number(boxCountInput.value) || 1));
-  state.boxCount = nextCount;
-  boxCountInput.value = String(nextCount);
+  if (boxCountInput.value === "") return;
+
+  state.boxCount = normalizeBoxCount(boxCountInput.value);
   render();
+});
+
+boxCountInput.addEventListener("blur", () => {
+  setBoxCount(boxCountInput.value);
+});
+
+decreaseBoxesButton.addEventListener("click", () => {
+  setBoxCount(state.boxCount - 1);
+});
+
+increaseBoxesButton.addEventListener("click", () => {
+  setBoxCount(state.boxCount + 1);
 });
 
 document.querySelectorAll('input[name="boxMode"]').forEach((input) => {
