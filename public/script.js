@@ -7,14 +7,14 @@ const flavors = [
     name: "Brigadeiro",
     image: "./assets/brigadeiro.png",
     description: "Chocolate com acabamento de granulado.",
-    ingredients: "Leite condensado, chocolate, creme de leite, manteiga e granulado."
+    ingredients: "Leite condensado, chocolate 50%, creme de leite, manteiga e granulado."
   },
   {
     id: "prestigio",
     name: "Prestigio",
     image: "./assets/prestigio.png",
     description: "Chocolate com coco em uma combinacao classica.",
-    ingredients: "Leite condensado, chocolate, coco ralado, creme de leite e manteiga."
+    ingredients: "Leite condensado, chocolate 50%, coco ralado, creme de leite e manteiga."
   },
   {
     id: "beijinho",
