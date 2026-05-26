@@ -21,7 +21,7 @@ const flavors = [
     name: "Beijinho",
     image: "./assets/beijinho.png",
     description: "Doce branco com coco e sabor caseiro.",
-    ingredients: "Leite condensado, coco ralado, creme de leite, manteiga e acucar cristal."
+    ingredients: "Leite condensado, coco ralado, creme de leite, manteiga e coco ralado por cima."
   },
   {
     id: "ninho",
